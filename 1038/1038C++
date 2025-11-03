@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <iostream>
+#include <iomanip>
+ 
+int main() {
+ 
+    int ent, qtde;
+    
+    double total = 0.0;
+    
+    std::cin >> ent >> qtde;
+    
+    switch (ent) {
+        case 1:
+            total = 4.00 * qtde;
+            break;
+        case 2:
+            total = 4.50 * qtde;
+            break;
+        case 3:
+            total = 5.00 * qtde;
+            break;
+        case 4:
+            total = 2.00 * qtde;
+            break;
+        case 5:
+            total = 1.50 * qtde;
+            break;            
+    }
+    
+    std::cout << std::fixed << std::setprecision(2) << "Total: R$ " << total << std::endl; 
+
+    
+    return 0;
+}
