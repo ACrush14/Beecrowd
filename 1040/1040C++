@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <iostream>
+#include <iomanip>
+
+int main() {
+ 
+    double n1, n2, n3, n4, n5, media, n_media;
+    
+    std::cin >> n1 >> n2 >> n3 >> n4;
+    
+    n1 = n1 *2;
+    n2 = n2 * 3;
+    n3 = n3 * 4;   
+    
+    media = (n1 + n2 + n3 + n4) / 10;
+    
+    std::cout << "Media: " << std::fixed << std::setprecision(1) << media << std::endl;
+    
+    if (media < 5) {
+        std::cout << "Aluno reprovado.\n"; 
+    } else if (media >= 7) {
+        std::cout << "Aluno aprovado.\n";
+    } else {
+        std::cout << "Aluno em exame.\n" ;
+        
+        std::cin >> n5;
+        
+        std::cout << "Nota do exame: " << std::fixed << std::setprecision(1) << n5 << std::endl;
+        
+        n_media = (media + n5) / 2;
+        
+        if (n_media < 5) {
+            std::cout << "Aluno reprovado.\n" ;
+        } else {
+            std::cout << "Aluno aprovado.\n" ;
+        }
+        
+        std::cout << "Media final: " << std::fixed << std::setprecision(1) << n_media << std::endl;
+    }
+    return 0;
+}

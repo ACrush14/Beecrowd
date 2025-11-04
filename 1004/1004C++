@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <iostream>
+ 
+int main() {
+    int a, b;
+    
+    std::cin >> a >> b;
+    
+    int mult = a * b;
+    
+    std::cout << "PROD = " << mult << std::endl;
+    
+    
+    return 0;
+}
