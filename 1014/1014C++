@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <iomanip>
+#include <iostream>
+ 
+int main() {
+ 
+    int x;
+    double y;
+    
+    double litro;
+    
+    std::cin >> x;
+    
+    std::cin >> y;
+    
+    litro = (double)x / y;
+    
+    std::cout << std::fixed << std::setprecision(3);
+    
+    std::cout << litro << " km/l" << std::endl;
+ 
+    return 0;
+}

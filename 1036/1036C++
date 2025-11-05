@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <iostream>
+#include <iomanip>
+#include <math.h>
+
+ 
+int main() {
+ 
+    double A, B, C, bas, R1, R2;
+    
+    std::cin >> A >> B >> C;
+    
+    bas = (B * B) - (4 * A * C);
+    
+    if (bas < 0 || A == 0) {
+        std::cout << "Impossivel calcular\n";
+    } else {
+        bas = sqrt(bas);
+        R1 = (-B + bas) / (2 * A);
+        R2 = (-B - bas) / (2 * A);
+        std::cout << std::fixed << std::setprecision(5) << "R1 = " << R1 << std::endl;
+        std::cout << std::fixed << std::setprecision(5) << "R2 = " << R2 << std::endl;
+        
+    }
+ 
+    return 0;
+}

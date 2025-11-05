@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <iostream>
+#include <iomanip>
+ 
+int main() {
+ 
+    std::string nome;
+    double sal, vendas, bonus, total;
+    
+    std::cin >> nome >> sal >> vendas;
+    
+    bonus = vendas * 0.15;
+    
+    total = sal + bonus;
+    
+    
+    std::cout << std::fixed << std::setprecision(2);
+    std::cout << "TOTAL = R$ " << total << std::endl;
+    
+    
+    return 0;
+}

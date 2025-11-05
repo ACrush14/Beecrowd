@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <iomanip>
+#include <iostream>
+ 
+int main() {
+ 
+    int num, hora;
+    double recebe, salario;
+    
+    std::cin >> num;
+    std::cin >> hora;
+    std::cin >> recebe;
+    
+    salario = hora * recebe;
+    
+    std::cout << "NUMBER = " << num << std::endl;
+    
+    std::cout << std::fixed << std::setprecision(2);
+    std::cout << "SALARY = U$ " << salario << std::endl;
+ 
+    return 0;
+}

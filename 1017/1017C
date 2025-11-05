@@ -1,0 +1,16 @@
+#include <stdio.h>
+ 
+int main() {
+
+    int tempo, vel;
+    double res;
+    
+    scanf("%d %d", &tempo, &vel);
+    
+    res = (tempo * vel) / 12.0;
+    
+    
+    printf("%.3f\n", res);
+
+    return 0;
+}

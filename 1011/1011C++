@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <iostream>
+#include <iomanip>
+ 
+int main() {
+ 
+    double pi = 3.14159;
+    double volume;
+    double r;
+    std::cin >> r;
+    
+    volume = ((4.0/3.0) * pi * (r * r * r));
+    
+    std::cout << "VOLUME = " << std::fixed << std::setprecision(3) << volume << std::endl;
+ 
+    return 0;
+}

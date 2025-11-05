@@ -1,0 +1,23 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    double A, B, C;
+    
+    scanf("%lf %lf %lf", &A, &B, &C);
+    
+        double tri = (A * C)/2;
+        double cir = 3.14159 * C * C;
+        double tra = ((A + B) / 2) * C;
+        double qua = B * B;
+        double ret = A * B;
+ 
+    printf("TRIANGULO: %.3f\n", tri);
+    printf("CIRCULO: %.3f\n", cir);
+    printf("TRAPEZIO: %.3f\n", tra);
+    printf("QUADRADO: %.3f\n", qua); 
+    printf("RETANGULO: %.3f\n", ret);
+
+
+    return 0;
+}

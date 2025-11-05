@@ -1,0 +1,16 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    int dist, tempo, res;
+    
+    scanf("%d", &dist);
+    
+    tempo = 2;
+    
+    res = dist * tempo;
+    
+    printf("%d minutos\n", res);
+    
+    return 0;
+}

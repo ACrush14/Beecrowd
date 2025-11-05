@@ -1,0 +1,28 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    int valor;
+    
+    scanf("%d", &valor);
+    
+    printf("%d\n", valor);
+    
+    int notas[] = {100, 50, 20, 10, 5, 2, 1};
+    
+    int num_nota = sizeof(notas) / sizeof(notas[0]);
+    
+    int valor_restante = valor;
+    int i, quantidade;
+    
+    for (i =0; i <num_nota; i++){
+    
+    int nota_atual = notas[i];
+    quantidade = valor_restante / nota_atual;
+    
+    printf("%d nota(s) de R$ %d,00\n", quantidade, nota_atual);
+    
+    valor_restante = valor_restante % nota_atual;
+    }
+    return 0;
+}

@@ -1,0 +1,20 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    int x;
+    double y;
+    double litro;
+    
+    scanf("%d", &x);
+    
+    scanf("%lf", &y);
+    
+    litro = x / y;
+    
+    printf("%.3lf km/l\n", litro);
+    
+    
+    
+    return 0;
+}

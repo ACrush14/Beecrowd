@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <math.h>
+ 
+int main() {
+ 
+    double num;
+    
+    scanf("%lf", &num);
+    
+    int valor = (int) floor((num * 100) + 0.5);
+    
+    int notas [] = {10000, 5000, 2000, 1000, 500, 200};
+    int moedas [] = {100, 50, 25, 10, 5, 1};
+    
+    int num_notas = sizeof(notas) / sizeof(notas[0]);
+    int num_moedas = sizeof(moedas) / sizeof(moedas[0]);
+    
+    printf("NOTAS:\n");
+    
+    for (int i = 0; i < num_notas; i++) {
+        int qtde = valor / notas[i];
+        
+        valor = valor % notas [i];
+        
+        printf("%d nota(s) de R$ %.2f\n", qtde, notas[i] / 100.0);
+        
+        
+    }
+    printf("MOEDAS:\n");
+    
+    for (int i = 0; i < num_moedas; i++) {
+        int qtde = valor / moedas[i];
+        
+        valor = valor % moedas [i];
+        
+        printf("%d moeda(s) de R$ %.2f\n", qtde, moedas[i] / 100.0);
+        
+    }
+    return 0;
+}

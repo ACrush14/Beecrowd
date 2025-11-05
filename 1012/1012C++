@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <iostream>
+#include <iomanip>
+
+
+int main() {
+ 
+    double A, B, C;
+    
+    std::cin >> A >> B >> C;
+    
+    double tri = (A * C)/2.0;
+    double cir = 3.14159 * C * C;
+    double tra = ((A + B) / 2.0) * C;
+    double qua = B * B;
+    double ret = A * B;
+    
+    
+    std::cout << std::fixed << std::setprecision(3);
+    
+    std::cout << "TRIANGULO: " << tri << std::endl;
+    std::cout << "CIRCULO: " << cir << std::endl;
+    std::cout << "TRAPEZIO: " << tra << std::endl;
+    std::cout << "QUADRADO: " << qua << std::endl;
+    std::cout << "RETANGULO: " << ret << std::endl;
+
+    return 0;
+}

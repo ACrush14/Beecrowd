@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <iostream>
+ 
+int main() {
+ 
+    int num, ano, mes, dia;
+    
+    std::cin >> num;
+    
+    ano = num / 365;
+    
+    num = num % 365;
+    
+    mes = num / 30;
+    
+    dia = num % 30;
+    
+    std::cout << ano << " ano(s)\n";
+    std::cout << mes << " mes(es)\n";
+    std::cout << dia << " dia(s)\n";
+ 
+    return 0;
+}

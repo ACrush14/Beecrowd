@@ -1,0 +1,28 @@
+#include <iostream>
+// #include <stdio.h> // Não é necessário, já que estamos usando <iostream>
+ 
+int main() {
+ 
+    int valor;
+    std::cin >> valor;
+    
+    // CORREÇÃO: Faltou imprimir o valor lido aqui
+    std::cout << valor << std::endl; 
+    
+    // A formatação 2,1 funciona, mas 2, 1 é mais legível
+    int notas[] = {100, 50, 20, 10, 5, 2, 1};
+    
+    int valor_restante = valor;
+    
+    // Seu loop está perfeito!
+    for (int atual_notas : notas) {
+        
+        int quantidade = valor_restante / atual_notas;
+        
+        std::cout << quantidade << " nota(s) de R$ " << atual_notas << ",00" << std::endl;
+        
+        valor_restante = valor_restante % atual_notas;
+    }
+
+    return 0;
+}
