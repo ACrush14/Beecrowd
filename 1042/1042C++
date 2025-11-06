@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <iostream>
+ 
+int main() {
+ 
+    int a, b, c;
+    
+    std::cin >>a >>b >>c;
+    
+    int original[3] = {a, b, c};
+    int ordenados[3] = {a, b, c};
+    
+    int temp;
+    
+    if (ordenados[0] > ordenados[1]) {
+        temp = ordenados[0];
+        ordenados[0] = ordenados[1];
+        ordenados[1] = temp;
+    }
+
+    if (ordenados[1] > ordenados[2]) {
+        temp = ordenados[1];
+        ordenados[1] = ordenados[2];
+        ordenados[2] = temp;
+    }
+    
+    
+    if (ordenados[0] > ordenados[1]) {
+        temp = ordenados[0];
+        ordenados[0] = ordenados[1];
+        ordenados[1] = temp;
+    }
+    
+    std::cout << ordenados[0] << std::endl;
+    std::cout << ordenados[1] << std::endl;    
+    std::cout << ordenados[2] << std::endl;
+    
+    std::cout << std::endl;
+    
+    std::cout << original[0] << std::endl;
+    std::cout << original[1] << std::endl;    
+    std::cout << original[2] << std::endl;
+    
+    
+    return 0;
+}
