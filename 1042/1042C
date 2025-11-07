@@ -1,26 +1,46 @@
 #include <stdio.h>
+#include <math.h>
  
 int main() {
  
-    double x, y;
+    int a, b, c;
     
-    scanf("%lf %lf", &x, &y);
+    scanf("%d %d %d", &a, &b, &c);
     
-    if (x == 0 && y == 0) {
-        printf("Origem\n");
-    } else if (x == 0) {
-        printf("Eixo Y\n");
-    } else if (y == 0) {
-        printf("Eixo X\n");
-    } else if (x>0 && y>0) {
-        printf("Q1\n");
-    } else if (x<0  &&  y>0) {
-        printf("Q2\n") ;
-    } else if (x<0  &&  y<0) {
-        printf("Q3\n");
-    } else {
-        printf("Q4\n");
+    int original[3] = {a, b, c};
+    int ordenados[3] = {a, b, c};
+    
+    int temp;
+    
+    if (ordenados[0] > ordenados[1]) {
+        temp = ordenados[0];
+        ordenados[0] = ordenados[1];
+        ordenados[1] = temp;
     }
+
+    if (ordenados[1] > ordenados[2]) {
+        temp = ordenados[1];
+        ordenados[1] = ordenados[2];
+        ordenados[2] = temp;
+    }
+    
+    
+    if (ordenados[0] > ordenados[1]) {
+        temp = ordenados[0];
+        ordenados[0] = ordenados[1];
+        ordenados[1] = temp;
+    }
+
+    
+    printf("%d\n", ordenados[0]);
+    printf("%d\n", ordenados[1]);
+    printf("%d\n", ordenados[2]);
+    
+    printf("\n");
+    
+    printf("%d\n", original[0]);
+    printf("%d\n", original[1]);
+    printf("%d\n", original[2]);
  
     return 0;
 }

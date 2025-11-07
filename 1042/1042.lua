@@ -1,17 +1,17 @@
-local x, y = io.read("*n", "*n")
+local a, b, c = io.read("*n", "*n", "*n")
 
-if x == 0 and y == 0 then
-    print("Origem")
-elseif x == 0 then
-    print("Eixo Y")
-elseif y == 0 then
-    print("Eixo X")
-elseif x>0 and y>0 then
-    print("Q1")
-elseif x<0 and y>0 then
-    print("Q2") 
-elseif x<0 and y<0 then
-    print("Q3")
-else
-    print("Q4")
-end
+local numeros = {a, b, c}
+
+local ordenados = {a, b, c}
+
+table.sort(ordenados)
+
+print(ordenados[1])
+print(ordenados[2])
+print(ordenados[3])
+    
+print()
+
+print(numeros[1])
+print(numeros[2])
+print(numeros[3])
