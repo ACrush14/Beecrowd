@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <iostream>
+
+int main() {
+ 
+    int horaInicial, minInicial, totalInicial, totalFinal, horaFinal, minFinal, totalMinutos, hTotal, mTotal;
+
+    std::cin >> horaInicial >> minInicial >> horaFinal >> minFinal;
+    
+    totalInicial = horaInicial * 60 + minInicial;
+    totalFinal = horaFinal * 60 + minFinal;
+        
+    totalMinutos = 0;
+    
+    
+    if (totalInicial == totalFinal) {
+        totalMinutos = 24*60;
+    } else if (totalInicial < totalFinal) {
+        totalMinutos = totalFinal - totalInicial;
+    } else {
+        totalMinutos = (totalFinal + 24 *60) - totalInicial;
+    }    
+    
+    hTotal = totalMinutos / 60;
+    mTotal = totalMinutos % 60;
+    
+    std::cout << "O JOGO DUROU " << hTotal << " HORA(S) E " << mTotal << " MINUTO(S)\n";
+ 
+    return 0;
+}
