@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <iostream>
+ 
+int main() {
+ 
+    int inicio, fim, total;
+    
+    std::cin >> inicio >> fim;
+    
+    total = 0;
+    
+    if (inicio == fim) {
+        total = 24;
+    } else if (inicio > fim) {
+        fim = fim + 24;
+        total = fim - inicio;
+    } else {
+        total = fim - inicio;
+    }
+    
+    
+    std::cout << "O JOGO DUROU " << total << " HORA(S)\n";
+    
+    
+    return 0;
+}
