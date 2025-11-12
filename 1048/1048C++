@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+ 
+int main() {
+ 
+    double sal, bonus, reajuste, novo;
+    int percent;
+    
+    std::cin >> sal;
+    
+    if (sal <= 400) {
+        bonus = 0.15;
+    } else if (sal <= 800) {
+        bonus = 0.12;
+    } else if (sal <= 1200) {
+        bonus = 0.10;
+    } else if (sal <= 2000) {
+        bonus = 0.07;
+    } else {
+        bonus = 0.04;
+    }
+    
+    reajuste = sal * bonus;
+    novo = sal + reajuste;
+    percent = (int)round(bonus * 100);
+    
+    std::cout << "Novo salario: " << std::fixed << std::setprecision(2) << novo << std::endl;
+    std::cout << "Reajuste ganho: " << std::fixed << std::setprecision(2) << reajuste << std::endl;    
+    std::cout << "Em percentual: " << percent << " %\n";    
+
+
+    return 0;
+}

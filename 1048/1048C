@@ -1,0 +1,31 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+    double sal, bonus, reajuste, novo;
+    int percent;
+    
+    scanf("%lf", &sal);
+    
+    if (sal <= 400) {
+        bonus = 0.15;
+    } else if (sal <= 800) {
+        bonus = 0.12;
+    } else if (sal <= 1200) {
+        bonus = 0.10;
+    } else if (sal <= 2000) {
+        bonus = 0.07;
+    } else {
+        bonus = 0.04;
+    }
+    
+    reajuste = sal * bonus;
+    novo = sal + reajuste;
+    percent = (int)round(bonus * 100);
+    
+    printf("Novo salario: %.2f\n", novo);
+    printf("Reajuste ganho: %.2f\n", reajuste);
+    printf("Em percentual: %d %%\n", percent);
+ 
+    return 0;
+}
