@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <iostream>
+ 
+int main() {
+ 
+    const char *cidade[100] = {0};
+    
+    cidade[61] = "Brasilia";
+    cidade[71] = "Salvador";
+    cidade[11] = "Sao Paulo";
+    cidade[21] = "Rio de Janeiro";
+    cidade[32] = "Juiz de Fora";
+    cidade[19] = "Campinas";
+    cidade[27] = "Vitoria";
+    cidade[31] = "Belo Horizonte";
+    
+    int a;
+    std::cin >> a;
+    
+    if (a >= 0 && a < 100 && cidade[a] != NULL) {
+        std::cout << cidade[a] << std::endl;
+    } else {
+        std::cout <<"DDD nao cadastrado\n";   
+    }
+    
+
+ 
+    return 0;
+}
